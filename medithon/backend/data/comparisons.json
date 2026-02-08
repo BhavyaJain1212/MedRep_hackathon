@@ -1,0 +1,371 @@
+{
+  "meta": {
+    "version": "1.0",
+    "total_tables": 9,
+    "description": "Drug comparison data for MedRep AI. Each table compares drugs within a therapeutic category with evidence-based differentiators.",
+    "source": "Clinical literature, PubMed/PMC citations, trial data (URANUS, ONTARGET, UKPDS, COGENT, GINA 2024, etc.)"
+  },
+  "comparisons": [
+    {
+      "id": 1,
+      "title": "Statins: Atorvastatin vs Rosuvastatin",
+      "category": "Cardiovascular",
+      "drugs": ["atorvastatin", "rosuvastatin"],
+      "parameters": [
+        {
+          "param": "LDL Reduction (standard dose)",
+          "atorvastatin": "39-46% (10mg)",
+          "rosuvastatin": "48-52% (5-10mg)",
+          "preference": "Rosuvastatin more potent; 5mg rosuvastatin ≈ 10mg atorvastatin"
+        },
+        {
+          "param": "Drug Interactions",
+          "atorvastatin": "Strong CYP3A4 substrate (grapefruit, macrolides, HIV protease inhibitors)",
+          "rosuvastatin": "Minimal CYP metabolism",
+          "preference": "Rosuvastatin preferred in patients on multiple medications"
+        },
+        {
+          "param": "Half-life & Dosing",
+          "atorvastatin": "14 hours (long-acting — any time of day is acceptable)",
+          "rosuvastatin": "19 hours (long-acting — any time of day)",
+          "preference": "Both are long-acting: take at any consistent time. 'Night-only' advice applies only to short-acting statins."
+        },
+        {
+          "param": "Cost (India)",
+          "atorvastatin": "Lower (Jan Aushadhi ₹9.50/10s)",
+          "rosuvastatin": "Higher (Jan Aushadhi ₹22.00/10s)",
+          "preference": "Atorvastatin for cost-conscious; Rosuvastatin for potency needs"
+        },
+        {
+          "param": "When to prefer",
+          "atorvastatin": "First-line for most patients; cost-effective option",
+          "rosuvastatin": "Higher LDL targets; significant polypharmacy with CYP3A4 inhibitors; partial statin intolerance (hydrophilic)",
+          "preference": "Both acceptable in diabetes — choose by LDL target, cost, interactions. Do NOT default to rosuvastatin for all diabetics."
+        }
+      ],
+      "evidence": ["URANUS trial (PMC1166567)", "ESC/EAS Guidelines", "AHA/ACC: Either appropriate"],
+      "key_takeaway": "Rosuvastatin is more potent per mg and has fewer CYP3A4 interactions; atorvastatin is often cheaper. Use either based on LDL target, comorbidities and cost — guidelines do not mandate one over the other."
+    },
+    {
+      "id": 2,
+      "title": "ARBs: Losartan vs Telmisartan",
+      "category": "Cardiovascular",
+      "drugs": ["losartan", "telmisartan"],
+      "parameters": [
+        {
+          "param": "Half-life",
+          "losartan": "6-9 hours",
+          "telmisartan": "24 hours (longest of all ARBs)",
+          "preference": "Telmisartan: true 24-hr coverage; Losartan may need twice daily"
+        },
+        {
+          "param": "Receptor Binding",
+          "losartan": "Competitive (surmountable)",
+          "telmisartan": "Insurmountable (slow dissociation)",
+          "preference": "Telmisartan: more sustained BP control"
+        },
+        {
+          "param": "Active Metabolite",
+          "losartan": "Requires CYP2C9 conversion to active metabolite E-3174",
+          "telmisartan": "Active as parent drug (minimal CYP450 metabolism, mainly biliary excretion)",
+          "preference": "Telmisartan: more predictable response; simpler in polypharmacy"
+        },
+        {
+          "param": "Metabolic Effects",
+          "losartan": "Uricosuric (lowers uric acid) — good for gout",
+          "telmisartan": "Neutral on uric acid; improves insulin sensitivity",
+          "preference": "Losartan: gout patients; Telmisartan: diabetes patients"
+        },
+        {
+          "param": "When to prefer",
+          "losartan": "Hypertension with hyperuricemia/gout; cost considerations",
+          "telmisartan": "Resistant HTN; diabetes; consistent 24-hr control; missed-dose concerns",
+          "preference": ""
+        }
+      ],
+      "evidence": ["ONTARGET trial", "LIFE trial", "PRISMA study (PMC8363588)"],
+      "key_takeaway": "Both are guideline-accepted first-line ARBs. Telmisartan has longer action and fewer CYP interactions; Losartan has unique uricosuric benefit for gout. Select by comorbidities, not blanket preference."
+    },
+    {
+      "id": 3,
+      "title": "Antihypertensives: Amlodipine (CCB) vs ARBs (Losartan/Telmisartan)",
+      "category": "Cardiovascular",
+      "drugs": ["amlodipine", "losartan", "telmisartan"],
+      "parameters": [
+        {
+          "param": "Side Effects",
+          "amlodipine": "Peripheral edema (dose-limiting), flushing, gingival hyperplasia",
+          "arb": "Generally well-tolerated; rare hyperkalemia",
+          "preference": "ARBs: better tolerability; Amlodipine: effective but edema common"
+        },
+        {
+          "param": "Renal Protection",
+          "amlodipine": "Neutral",
+          "arb": "Proven benefit in diabetic nephropathy/proteinuria",
+          "preference": "ARBs preferred in CKD with proteinuria"
+        },
+        {
+          "param": "Metabolic Effects",
+          "amlodipine": "Neutral",
+          "arb": "Improved insulin sensitivity; may reduce new-onset diabetes",
+          "preference": "ARB preferred in metabolic syndrome/diabetes"
+        },
+        {
+          "param": "When to prefer",
+          "amlodipine": "Elderly, isolated systolic HTN, low-renin states; cost-effective monotherapy",
+          "arb": "Diabetes, CKD, proteinuria, heart failure, metabolic syndrome",
+          "preference": ""
+        }
+      ],
+      "evidence": ["ASCOT trial", "ACCOMPLISH trial", "LIFE trial", "JNC-8 Guidelines"],
+      "key_takeaway": "Both are first-line. Amlodipine for elderly/ISH; ARBs for diabetes/CKD. Often combined as Amlodipine+Telmisartan FDC."
+    },
+    {
+      "id": 4,
+      "title": "Antiplatelets: Aspirin vs Clopidogrel vs DAPT",
+      "category": "Cardiovascular",
+      "drugs": ["aspirin", "clopidogrel"],
+      "parameters": [
+        {
+          "param": "Mechanism",
+          "aspirin": "Irreversible COX-1 inhibition (blocks TXA2)",
+          "clopidogrel": "Irreversible P2Y12 receptor blockade (ADP pathway)",
+          "dapt": "Dual pathway blockade",
+          "preference": ""
+        },
+        {
+          "param": "DAPT Duration",
+          "aspirin": "N/A",
+          "clopidogrel": "N/A",
+          "dapt": "Post-PCI: 6-12 months; ACS: 12 months; Minor stroke/TIA: 21-90 days",
+          "preference": ""
+        },
+        {
+          "param": "Bleeding Risk",
+          "aspirin": "1-2% major bleeding/year",
+          "clopidogrel": "Similar to aspirin monotherapy",
+          "dapt": "2-3x higher than monotherapy",
+          "preference": ""
+        },
+        {
+          "param": "Drug Interactions",
+          "aspirin": "NSAIDs (ibuprofen reduces efficacy)",
+          "clopidogrel": "PPIs — omeprazole/esomeprazole reduce efficacy",
+          "dapt": "All interactions of both agents",
+          "preference": "Avoid ibuprofen with aspirin; avoid omeprazole with clopidogrel"
+        },
+        {
+          "param": "When to prefer",
+          "aspirin": "Secondary prevention lifelong",
+          "clopidogrel": "Aspirin allergy; post-PCI; peripheral artery disease",
+          "dapt": "Post-PCI (mandatory), ACS, recent stroke/TIA (short course)",
+          "preference": ""
+        }
+      ],
+      "evidence": ["CAPRIE trial", "CURE trial", "CURRENT-OASIS 7", "ESC 2024 Guidelines"],
+      "key_takeaway": "DAPT is standard after PCI (duration tailored to ischaemic vs bleeding risk). Clopidogrel is the primary alternative to aspirin. For GI protection with clopidogrel, avoid omeprazole/esomeprazole and prefer pantoprazole or a similar low-interaction PPI."
+    },
+    {
+      "id": 5,
+      "title": "PPIs: Pantoprazole vs Omeprazole vs Rabeprazole",
+      "category": "Gastrointestinal",
+      "drugs": ["pantoprazole", "omeprazole", "rabeprazole"],
+      "parameters": [
+        {
+          "param": "CYP2C19 Dependence",
+          "pantoprazole": "Minimal",
+          "omeprazole": "High (major CYP2C19 substrate)",
+          "rabeprazole": "Minimal (non-enzymatic reduction)",
+          "preference": ""
+        },
+        {
+          "param": "Clopidogrel Interaction",
+          "pantoprazole": "NONE clinically significant",
+          "omeprazole": "REDUCES clopidogrel antiplatelet effect",
+          "rabeprazole": "Minimal (may be alternative to pantoprazole)",
+          "preference": "Pantoprazole or Rabeprazole for patients on Clopidogrel"
+        },
+        {
+          "param": "When to prefer",
+          "pantoprazole": "Patients on Clopidogrel/DAPT; cardiac patients; GERD/PUD",
+          "omeprazole": "Cost-sensitive; short-term use; NO clopidogrel",
+          "rabeprazole": "Alternative to pantoprazole; rapid acid control needed",
+          "preference": ""
+        }
+      ],
+      "evidence": ["COGENT trial", "FDA boxed warning on Omeprazole+Clopidogrel", "Cardiology guidance: Avoid omeprazole/esomeprazole with clopidogrel; use pantoprazole or other low-CYP2C19-inhibiting PPI"],
+      "key_takeaway": "Avoid omeprazole/esomeprazole with clopidogrel when alternatives exist; prefer pantoprazole or another weak CYP2C19 inhibitor (e.g., rabeprazole) for GI protection."
+    },
+    {
+      "id": 6,
+      "title": "Antibiotics: Amoxicillin vs Amox+Clav vs Azithromycin vs Cefixime",
+      "category": "Antibiotics",
+      "drugs": ["amoxicillin", "amoxicillin_clavulanate", "azithromycin", "cefixime"],
+      "parameters": [
+        {
+          "param": "Spectrum",
+          "amoxicillin": "Gram-positive, some gram-negative (no β-lactamase coverage)",
+          "amox_clav": "Extended — β-lactamase coverage added",
+          "azithromycin": "Atypical pathogens (Mycoplasma, Chlamydia, Legionella)",
+          "cefixime": "Gram-negative (Enterobacteriaceae)",
+          "preference": ""
+        },
+        {
+          "param": "Typhoid Efficacy (India-relevant)",
+          "amoxicillin": "Poor (high resistance)",
+          "amox_clav": "Variable",
+          "azithromycin": "Good (7-day course) — preferred oral agent",
+          "cefixime": "Less favoured — rising resistance in Indian enteric fever",
+          "preference": "In Indian enteric fever: azithromycin or ceftriaxone IV preferred; cefixime monotherapy less favoured due to resistance"
+        },
+        {
+          "param": "Dosing Frequency",
+          "amoxicillin": "TDS (3x daily)",
+          "amox_clav": "TDS",
+          "azithromycin": "Once daily — better compliance",
+          "cefixime": "BD or OD",
+          "preference": "Azithromycin: best compliance"
+        },
+        {
+          "param": "When to prefer",
+          "amoxicillin": "Simple infections in low-resistance settings; first-line URTI",
+          "amox_clav": "Suspected β-lactamase organisms; sinusitis; bite wounds",
+          "azithromycin": "Atypical infections; typhoid; non-compliance; penicillin allergy",
+          "cefixime": "Typhoid alternative; amoxicillin allergy; uncomplicated UTI",
+          "preference": ""
+        }
+      ],
+      "evidence": ["WHO Typhoid guidelines", "IDSA sinusitis guidelines", "CAP guidelines"],
+      "key_takeaway": "India-specific: Azithromycin or ceftriaxone preferred for typhoid (cefixime less favoured due to resistance). Reserve amox-clav and azithro for clear indications — antimicrobial stewardship matters."
+    },
+    {
+      "id": 7,
+      "title": "NSAIDs: Paracetamol vs Ibuprofen vs Diclofenac vs Aceclofenac",
+      "category": "Pain Management",
+      "drugs": ["paracetamol", "ibuprofen", "diclofenac", "aceclofenac"],
+      "parameters": [
+        {
+          "param": "Anti-inflammatory",
+          "paracetamol": "None",
+          "ibuprofen": "Moderate",
+          "diclofenac": "Strong",
+          "aceclofenac": "Strong",
+          "preference": ""
+        },
+        {
+          "param": "GI Risk (Ulcer/Bleed)",
+          "paracetamol": "Lowest GI risk; main limitation is hepatotoxicity in overdose or chronic high doses",
+          "ibuprofen": "Moderate",
+          "diclofenac": "High (highest of NSAIDs)",
+          "aceclofenac": "Moderate-High (metabolised to diclofenac — probably carries similar CV risk)",
+          "preference": ""
+        },
+        {
+          "param": "Cardiovascular Risk",
+          "paracetamol": "Lowest relative CV risk; main limitation is hepatic toxicity at high or chronic doses",
+          "ibuprofen": "Low-Moderate",
+          "diclofenac": "High (black box warning)",
+          "aceclofenac": "Moderate",
+          "preference": "Paracetamol safest for cardiac patients (watch liver)"
+        },
+        {
+          "param": "Aspirin Interaction",
+          "paracetamol": "None",
+          "ibuprofen": "REDUCES aspirin antiplatelet effect",
+          "diclofenac": "Minimal",
+          "aceclofenac": "Minimal",
+          "preference": "AVOID Ibuprofen in patients on low-dose Aspirin"
+        },
+        {
+          "param": "When to prefer",
+          "paracetamol": "First-line for mild pain/fever; patients on aspirin; elderly; renal impairment; preferred analgesic throughout pregnancy",
+          "ibuprofen": "Short-term MSK pain/fever in low CV/GI risk adults; avoid in 3rd trimester pregnancy",
+          "diclofenac": "Severe inflammatory pain (arthritis); topical preferred over oral; avoid in 3rd trimester",
+          "aceclofenac": "Chronic arthritis; GI profile may be somewhat better than diclofenac but CV/renal risks remain; avoid in 3rd trimester",
+          "preference": "PREGNANCY: Paracetamol preferred throughout. ALL NSAIDs (ibuprofen/diclofenac/aceclofenac) contraindicated in 3rd trimester (ductus arteriosus, renal risks)."
+        }
+      ],
+      "evidence": ["VIGOR trial", "APPROVe trial", "PMC2737651 (Aspirin+Ibuprofen interaction)"],
+      "key_takeaway": "Paracetamol is safest first-line (watch liver). NEVER combine Ibuprofen with Aspirin. Diclofenac has highest CV risk. ALL NSAIDs avoid in 3rd trimester pregnancy."
+    },
+    {
+      "id": 8,
+      "title": "Diabetes: Metformin vs Glimepiride",
+      "category": "Diabetes",
+      "drugs": ["metformin", "glimepiride"],
+      "parameters": [
+        {
+          "param": "First-line Status",
+          "metformin": "YES \u2014 ADA/EASD/API standard first-line for most T2DM",
+          "glimepiride": "No \u2014 Second/third-line",
+          "preference": "Metformin is standard first-line; add or consider SGLT2i/GLP-1 RA early in patients with ASCVD/HF/CKD when accessible"
+        },
+        {
+          "param": "Hypoglycemia Risk",
+          "metformin": "None (euglycemic)",
+          "glimepiride": "Moderate-High (dose-dependent)",
+          "preference": "Metformin safer in elderly, patients living alone"
+        },
+        {
+          "param": "Weight Effect",
+          "metformin": "Neutral to slight loss",
+          "glimepiride": "Weight gain",
+          "preference": "Metformin preferred for overweight/obese"
+        },
+        {
+          "param": "Cardiovascular Benefit",
+          "metformin": "Yes (UKPDS legacy effect); acceptable in stable HF with adequate renal function",
+          "glimepiride": "Neutral; hypoglycaemia itself may worsen outcomes",
+          "preference": "Metformin preferred in CAD/stable HF. For high ASCVD/HF/CKD risk: SGLT2i or GLP-1 RA now preferred early (when available/affordable)."
+        },
+        {
+          "param": "When to prefer",
+          "metformin": "All T2DM unless contraindicated; prediabetes; metabolic syndrome",
+          "glimepiride": "Metformin intolerance; need rapid glucose reduction; combination therapy",
+          "preference": ""
+        }
+      ],
+      "evidence": ["UKPDS trial", "Diabetes Prevention Program", "ADA 2024 Standards of Care"],
+      "key_takeaway": "Metformin is universal first-line. Add Glimepiride when A1c targets not met and cost limits SGLT2i/GLP-1 RA access. Caution: Glimepiride causes hypoglycemia and weight gain."
+    },
+    {
+      "id": 9,
+      "title": "Respiratory: Salbutamol vs Budesonide vs Montelukast+Levocetirizine",
+      "category": "Respiratory",
+      "drugs": ["salbutamol", "budesonide", "montelukast_levocetirizine"],
+      "parameters": [
+        {
+          "param": "Class",
+          "salbutamol": "Reliever (SABA — Short-Acting Beta-2 Agonist)",
+          "budesonide": "Controller (ICS — Inhaled Corticosteroid)",
+          "montelukast_levo": "Controller (Leukotriene Antagonist + H1-Antihistamine)",
+          "preference": ""
+        },
+        {
+          "param": "Onset",
+          "salbutamol": "Rapid (5-15 min)",
+          "budesonide": "Slow (days to weeks)",
+          "montelukast_levo": "Moderate (hours for levocetirizine; days for montelukast)",
+          "preference": "SABA: rescue; Others: maintenance"
+        },
+        {
+          "param": "Side Effects",
+          "salbutamol": "Tremors, tachycardia, palpitations, hypokalemia (high doses)",
+          "budesonide": "Oral candidiasis, hoarseness, adrenal suppression (high dose)",
+          "montelukast_levo": "Montelukast: neuropsychiatric effects (FDA black box); Levocetirizine: mild sedation",
+          "preference": "ICS: lowest effective dose; Montelukast: monitor mood changes"
+        },
+        {
+          "param": "When to prefer",
+          "salbutamol": "Acute symptom relief and pre-exercise prophylaxis — ONLY within an ICS-based strategy (SABA-only regimens discouraged by GINA 2024)",
+          "budesonide": "Any persistent asthma or high-risk intermittent asthma requiring exacerbation prevention; core ICS in MART/SMART regimens",
+          "montelukast_levo": "Co-existing allergic rhinitis; exercise-induced or aspirin-sensitive asthma; as add-on to ICS±LABA. Note: montelukast has neuropsychiatric warnings (FDA)",
+          "preference": ""
+        }
+      ],
+      "evidence": ["SABINA studies (SABA overuse = poor control)", "FACET trial", "START trial", "GINA 2024 Guidelines"],
+      "key_takeaway": "GINA 2024: SABA-only treatment DISCOURAGED due to increased exacerbation risk. All adults/adolescents should receive ICS-containing therapy (daily ICS or as-needed ICS-formoterol). Montelukast is add-on, not ICS replacement, and carries neuropsychiatric warnings.",
+      "critical_warning": "If patient uses Salbutamol >3 times/week, asthma is poorly controlled — step up ICS therapy."
+    }
+  ]
+}

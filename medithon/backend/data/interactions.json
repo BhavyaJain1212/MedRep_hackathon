@@ -1,0 +1,118 @@
+{
+  "meta": {
+    "version": "1.0",
+    "total_scenarios": 6,
+    "description": "Cross-category drug interaction scenarios for MedRep AI. Each scenario represents a common Indian comorbidity pattern where drug conflicts can be dangerous."
+  },
+  "scenarios": [
+    {
+      "id": 1,
+      "title": "Diabetic + Joint Pain",
+      "patient_profile": "Patient with diabetes taking Metformin, presenting with joint pain",
+      "drug_a": {"name": "Metformin", "id": "metformin", "category": "Diabetes"},
+      "drug_b": {"name": "Ibuprofen / Diclofenac", "id": "ibuprofen", "category": "Pain Management"},
+      "severity": "high",
+      "risk": "NSAIDs reduce renal function → increased risk of Metformin accumulation → lactic acidosis",
+      "mechanism": "NSAIDs inhibit prostaglandin-mediated renal blood flow. Reduced GFR impairs Metformin clearance, leading to dangerous accumulation and lactic acidosis.",
+      "recommendation": "Use Paracetamol instead. It does not affect renal function and is safe with Metformin.",
+      "safer_alternative": {"name": "Paracetamol", "id": "paracetamol"},
+      "source": "OpenFDA Metformin label — drug_interactions section",
+      "demo_query": "Can I prescribe Ibuprofen for a patient already on Metformin? What are the risks and cheaper alternatives?"
+    },
+    {
+      "id": 2,
+      "title": "Cardiac + GI Issues",
+      "patient_profile": "Post-PCI/ACS patient on Clopidogrel with gastric complaints",
+      "drug_a": {"name": "Clopidogrel", "id": "clopidogrel", "category": "Cardiovascular"},
+      "drug_b": {"name": "Omeprazole", "id": "omeprazole", "category": "Gastrointestinal"},
+      "severity": "high",
+      "risk": "Omeprazole inhibits CYP2C19, reducing Clopidogrel conversion to active metabolite → loss of antiplatelet efficacy → increased stent thrombosis/MI risk",
+      "mechanism": "Clopidogrel is a prodrug requiring CYP2C19 activation. Omeprazole is a potent CYP2C19 inhibitor, reducing active metabolite formation by up to 45%.",
+      "recommendation": "Use Pantoprazole instead. It has minimal CYP2C19 interaction and is safe with Clopidogrel (COGENT trial evidence).",
+      "safer_alternative": {"name": "Pantoprazole", "id": "pantoprazole"},
+      "source": "FDA safety communication; COGENT trial; AHA/ACC/ESC guidelines",
+      "demo_query": "My cardiac patient on Clopidogrel has acidity. Can I give Omeprazole?"
+    },
+    {
+      "id": 3,
+      "title": "Hypertension + Pain",
+      "patient_profile": "Hypertensive patient on ARBs (Losartan/Telmisartan) needing pain relief",
+      "drug_a": {"name": "Losartan / Telmisartan", "id": "losartan", "category": "Cardiovascular"},
+      "drug_b": {"name": "Ibuprofen / Diclofenac", "id": "ibuprofen", "category": "Pain Management"},
+      "severity": "moderate",
+      "risk": "NSAIDs blunt antihypertensive effect of ARBs + combined renal risk (afferent + efferent arteriole constriction → acute kidney injury)",
+      "mechanism": "ARBs dilate efferent arteriole; NSAIDs constrict afferent arteriole. Together they reduce glomerular perfusion pressure, risking AKI. NSAIDs also cause sodium retention, counteracting BP lowering.",
+      "recommendation": "Use Paracetamol for pain. If NSAID is essential, use lowest dose for shortest duration and monitor renal function.",
+      "safer_alternative": {"name": "Paracetamol", "id": "paracetamol"},
+      "source": "OpenFDA Losartan label; JNC-8 guidelines",
+      "demo_query": "Can a hypertensive patient on Losartan take Diclofenac for back pain?"
+    },
+    {
+      "id": 4,
+      "title": "Diabetic + Imaging",
+      "patient_profile": "Diabetic patient on Metformin scheduled for CT scan with IV contrast",
+      "drug_a": {"name": "Metformin", "id": "metformin", "category": "Diabetes"},
+      "drug_b": {"name": "IV Iodinated Contrast", "id": null, "category": "Radiology"},
+      "severity": "high",
+      "risk": "IV contrast can cause transient renal impairment → Metformin accumulation → lactic acidosis",
+      "mechanism": "Iodinated contrast is nephrotoxic. The temporary GFR reduction impairs Metformin clearance. Standard protocol: withhold Metformin 48 hours before and after contrast.",
+      "recommendation": "Stop Metformin 48 hours before contrast administration. Restart only after confirming renal function (eGFR) is stable post-procedure.",
+      "safer_alternative": null,
+      "source": "ACR Manual on Contrast Media; standard clinical practice",
+      "demo_query": "My diabetic patient needs a CT scan with contrast. What about their Metformin?"
+    },
+    {
+      "id": 5,
+      "title": "Cardiac + Infection",
+      "patient_profile": "Patient on statin therapy (Atorvastatin) who develops an infection needing Azithromycin",
+      "drug_a": {"name": "Atorvastatin", "id": "atorvastatin", "category": "Cardiovascular"},
+      "drug_b": {"name": "Azithromycin", "id": "azithromycin", "category": "Antibiotics"},
+      "severity": "moderate",
+      "risk": "Azithromycin prolongs QT interval (primary risk); atorvastatin has mild QT-prolonging potential. Combined use increases arrhythmia risk in susceptible patients.",
+      "mechanism": "Azithromycin blocks cardiac hERG potassium channels (QT prolongation \u2014 primary driver). Atorvastatin has mild QT effect. Risk of torsades de pointes increases in patients with baseline QT prolongation, electrolyte disturbance, or other QT-prolonging drugs. Unlike clarithromycin/erythromycin, azithromycin has minimal CYP3A4 effect, so statin myopathy risk is lower.",
+      "recommendation": "Short 3\u20135 day courses are usually safe. Monitor for QT prolongation; consider ECG if patient has other QT risk factors (elderly, electrolyte imbalance, other QT-prolonging drugs). Alternative: Amoxicillin if appropriate for the infection.",
+      "safer_alternative": {"name": "Amoxicillin", "id": "amoxicillin"},
+      "source": "OpenFDA label data; FDA drug safety communication on Azithromycin",
+      "demo_query": "Can I give Azithromycin to a patient already on Atorvastatin?"
+    },
+    {
+      "id": 6,
+      "title": "Respiratory + Cardiac",
+      "patient_profile": "Patient with cardiac disease who also has asthma/COPD needing bronchodilator",
+      "drug_a": {"name": "Salbutamol", "id": "salbutamol", "category": "Respiratory"},
+      "drug_b": {"name": "Cardiac drugs (beta-blockers, anti-arrhythmics)", "id": null, "category": "Cardiovascular"},
+      "severity": "moderate",
+      "risk": "Salbutamol (beta-2 agonist) causes tachycardia, palpitations, hypokalemia — problematic in patients with arrhythmias, CAD, or heart failure",
+      "mechanism": "Beta-2 agonists increase heart rate and myocardial oxygen demand. In CAD patients, this can trigger angina. Hypokalemia from high-dose salbutamol increases arrhythmia risk, especially with concurrent digoxin or diuretics.",
+      "recommendation": "Use lowest effective salbutamol dose. Monitor heart rate and potassium. For maintenance, prefer inhaled corticosteroids (Budesonide) as controller therapy to reduce rescue salbutamol use.",
+      "safer_alternative": {"name": "Budesonide (as controller to reduce SABA use)", "id": "budesonide"},
+      "source": "GINA 2024 guidelines; clinical pharmacology",
+      "demo_query": "My cardiac patient with asthma is using Salbutamol frequently. Is this safe?"
+    }
+  ],
+  "interaction_pairs": {
+    "metformin+ibuprofen": 1,
+    "metformin+diclofenac": 1,
+    "metformin+aceclofenac": 1,
+    "clopidogrel+omeprazole": 2,
+    "losartan+ibuprofen": 3,
+    "losartan+diclofenac": 3,
+    "telmisartan+ibuprofen": 3,
+    "telmisartan+diclofenac": 3,
+    "amlodipine+ibuprofen": 3,
+    "amlodipine+diclofenac": 3,
+    "atorvastatin+azithromycin": 5,
+    "rosuvastatin+azithromycin": 5,
+    "salbutamol+digoxin": 6,
+    "salbutamol+beta_blocker": 6,
+    "aspirin+ibuprofen": 0
+  },
+  "additional_flags": {
+    "aspirin+ibuprofen": {
+      "severity": "moderate",
+      "risk": "Ibuprofen competitively blocks COX-1, reducing Aspirin's irreversible antiplatelet effect",
+      "recommendation": "Avoid concurrent use in patients on low-dose aspirin for cardioprotection. Prefer paracetamol. If an NSAID is essential, consider the lowest effective dose of a short-course alternative (e.g., naproxen with PPI) and separate dosing from aspirin. Avoid long-term diclofenac in CVD patients (highest CV risk).",
+      "source": "PMC2737651; FDA advisory"
+    }
+  }
+}

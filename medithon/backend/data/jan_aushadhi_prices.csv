@@ -1,0 +1,94 @@
+Drug,Variant Name,Unit Size,MRP,Group Name
+Paracetamol,Aceclofenac 100mg and Paracetamol 325mg Tablets,10's,15.63,Pain Management
+Paracetamol,"Chlorzoxazone 500mg, Diclofenac 50mg and Paracetamol 325mg Tablets",10's,10.71,Pain Management
+Paracetamol,Diclofenac 50mg and Paracetamol 325mg Tablets,10's,7.5,Pain Management
+Paracetamol,Ibuprofen 400mg and Paracetamol 325mg Tablets,10's,6.19,Pain Management
+Paracetamol,Paracetamol Tablets IP 500 mg,10's,2.05,Pain Management
+Paracetamol,Paracetamol Tablets IP 650 mg,10's,3.16,Pain Management
+Paracetamol,Paracetamol Oral Suspension IP 125mg per 5ml,60 ml,15.0,Pain Management
+Paracetamol,Paracetamol Infusion IP 1gm/100ml,100 ml,38.0,Pain Management
+Ibuprofen,Ibuprofen Tablets IP 200 mg,10's,4.5,Pain Management
+Ibuprofen,Ibuprofen Tablets IP 400 mg,10's,6.25,Pain Management
+Ibuprofen,Ibuprofen 400mg and Paracetamol 325mg Tablets,10's,6.19,Pain Management
+Ibuprofen,Ibuprofen Oral Suspension IP 100mg per 5ml,60 ml,19.0,Pain Management
+Diclofenac,Diclofenac Tablets IP 50 mg,10's,5.0,Pain Management
+Diclofenac,Diclofenac Sodium Injection IP 75mg/ml,1 ml,3.1,Pain Management
+Diclofenac,Diclofenac 50mg and Paracetamol 325mg Tablets,10's,7.5,Pain Management
+Diclofenac,"Chlorzoxazone 500mg, Diclofenac 50mg and Paracetamol 325mg Tablets",10's,10.71,Pain Management
+Diclofenac,Diclofenac Gel IP 1% w/w,30 gm,28.0,Pain Management
+Aceclofenac,Aceclofenac Tablets IP 100 mg,10's,11.25,Pain Management
+Aceclofenac,Aceclofenac 100mg and Paracetamol 325mg Tablets,10's,15.63,Pain Management
+Aspirin,Aspirin Gastro-resistant Tablets IP 150 mg,14's,4.7,Cardiovascular
+Aspirin,Aspirin Gastro-resistant Tablets IP 75 mg,14's,2.5,Cardiovascular
+Aspirin,Aspirin 75mg and Clopidogrel 75mg Capsules,10's,52.0,Cardiovascular
+Amoxycillin,Amoxycillin Capsules IP 250mg,10's,12.38,Antibiotics
+Amoxycillin,Amoxycillin Capsules IP 500mg,10's,32.82,Antibiotics
+Amoxycillin,Amoxycillin Oral Suspension IP 125mg per 5ml,60 ml,17.82,Antibiotics
+Amoxycillin,Amoxycillin Trihydrate Dispersible Tablets IP 250mg,10's,11.25,Antibiotics
+Amoxycillin,Amoxycillin 250mg and Cloxacillin 250mg Capsules,10's,29.91,Antibiotics
+Amoxycillin + Clavulanate,Amoxycillin 250mg and Potassium Clavulanate 125mg Tablets,6's,44.07,Antibiotics
+Amoxycillin + Clavulanate,Amoxycillin 875mg and Potassium Clavulanate 125mg Tablets,6's,72.19,Antibiotics
+Amoxycillin + Clavulanate,Amoxycillin 500mg and Potassium Clavulanate 125mg Tablets,6's,52.6,Antibiotics
+Amoxycillin + Clavulanate,Amoxycillin 1g and Potassium Clavulanate 200mg Injection,Vial & Wfi,54.38,Antibiotics
+Amoxycillin + Clavulanate,Amoxycillin 250mg and Potassium Clavulanate 50mg Injection,Vial & Wfi,26.25,Antibiotics
+Amoxycillin + Clavulanate,Amoxycillin 500mg and Potassium Clavulanate 100mg Injection,Vial & Wfi,37.5,Antibiotics
+Amoxycillin + Clavulanate,Amoxycillin 200mg and Potassium Clavulanate 28.5mg Oral Suspension,30 ml,25.32,Antibiotics
+Amoxycillin + Clavulanate,Amoxycillin 400mg and Potassium Clavulanate 57mg Oral Suspension,30 ml,46.88,Antibiotics
+Amoxycillin + Clavulanate,Amoxycillin 80mg and Potassium Clavulanate 11.4mg Drops,10 ml,32.82,Antibiotics
+Amoxycillin + Clavulanate,"Amoxycillin 200Mg , Clavulanic Acid 28.5Mg And Lactic Acid Bacillus Suspension",30 ml Bottle,30.0,Antibiotics
+Azithromycin,Azithromycin Tablets IP 250 mg,6's,28.0,Antibiotics
+Azithromycin,Azithromycin Tablets IP 500 mg,3's,32.0,Antibiotics
+Azithromycin,Azithromycin Oral Suspension IP 200mg per 5ml,15 ml,30.0,Antibiotics
+Cefixime,Cefixime Tablets IP 200 mg,10's,75.0,Antibiotics
+Cefixime,Cefixime Dispersible Tablets IP 100 mg,10's,60.0,Antibiotics
+Cefixime,Cefixime Oral Suspension IP 50mg per 5ml,30 ml,55.0,Antibiotics
+Ceftriaxone,Ceftriaxone Injection IP 1 gm,Vial,30.0,Antibiotics
+Ceftriaxone,Ceftriaxone Injection IP 500 mg,Vial,20.0,Antibiotics
+Ceftriaxone,Ceftriaxone 1gm + Sulbactam 500mg Injection,Vial,85.0,Antibiotics
+Cefuroxime,Cefuroxime Axetil Tablets IP 250 mg,10's,150.0,Antibiotics
+Cefuroxime,Cefuroxime Axetil Tablets IP 500 mg,10's,220.0,Antibiotics
+Metronidazole,Metronidazole Tablets IP 400 mg,10's,7.0,Antibiotics
+Metronidazole,Metronidazole Oral Suspension IP 200mg per 5ml,60 ml,20.0,Antibiotics
+Metronidazole,Metronidazole Infusion IP 500mg/100ml,100 ml,18.0,Antibiotics
+Doxycycline,Doxycycline Capsules IP 100 mg,10's,22.0,Antibiotics
+Levofloxacin,Levofloxacin Tablets IP 500 mg,10's,85.0,Antibiotics
+Levofloxacin,Levofloxacin Tablets IP 250 mg,10's,55.0,Antibiotics
+Ciprofloxacin,Ciprofloxacin Tablets IP 500 mg,10's,48.0,Antibiotics
+Ciprofloxacin,Ciprofloxacin Tablets IP 250 mg,10's,28.0,Antibiotics
+Ciprofloxacin,Ciprofloxacin Eye Drops IP 0.3%,5 ml,18.0,Ophthalmology
+Metformin,Metformin Tablets IP 500 mg,10's,7.5,Diabetes
+Metformin,Metformin Tablets IP 850 mg,10's,12.0,Diabetes
+Metformin,Metformin SR Tablets 500 mg,10's,10.5,Diabetes
+Glimepiride,Glimepiride Tablets IP 1 mg,10's,8.0,Diabetes
+Glimepiride,Glimepiride Tablets IP 2 mg,10's,14.0,Diabetes
+Glimepiride,Glimepiride Tablets IP 4 mg,10's,22.0,Diabetes
+Glimepiride,Glimepiride 2mg + Metformin 500mg Tablets,10's,18.0,Diabetes
+Insulin,Human Insulin Injection 40 IU/ml,10 ml,145.0,Diabetes
+Insulin,Human Mixtard Insulin 30/70 Injection,10 ml,165.0,Diabetes
+Amlodipine,Amlodipine Tablets IP 5 mg,10's,5.0,Cardiovascular
+Amlodipine,Amlodipine Tablets IP 10 mg,10's,9.0,Cardiovascular
+Losartan,Losartan Tablets IP 25 mg,10's,8.0,Cardiovascular
+Losartan,Losartan Tablets IP 50 mg,10's,12.0,Cardiovascular
+Telmisartan,Telmisartan Tablets IP 40 mg,10's,14.0,Cardiovascular
+Telmisartan,Telmisartan Tablets IP 80 mg,10's,22.0,Cardiovascular
+Atorvastatin,Atorvastatin Tablets IP 10 mg,10's,9.5,Cardiovascular
+Atorvastatin,Atorvastatin Tablets IP 20 mg,10's,16.0,Cardiovascular
+Rosuvastatin,Rosuvastatin Tablets IP 10 mg,10's,22.0,Cardiovascular
+Rosuvastatin,Rosuvastatin Tablets IP 20 mg,10's,38.0,Cardiovascular
+Clopidogrel,Clopidogrel Tablets IP 75 mg,10's,28.0,Cardiovascular
+Clopidogrel,Aspirin 75mg and Clopidogrel 75mg Capsules,10's,52.0,Cardiovascular
+Pantoprazole,Pantoprazole Tablets IP 40 mg,10's,18.0,Gastrointestinal
+Pantoprazole,Pantoprazole Injection IP 40 mg,Vial,42.0,Gastrointestinal
+Omeprazole,Omeprazole Capsules IP 20 mg,10's,14.0,Gastrointestinal
+Omeprazole,Omeprazole Capsules IP 40 mg,10's,24.0,Gastrointestinal
+Rabeprazole,Rabeprazole Tablets IP 20 mg,10's,22.0,Gastrointestinal
+Ondansetron,Ondansetron Tablets IP 4 mg,10's,10.0,Gastrointestinal
+Ondansetron,Ondansetron Injection IP 2mg/ml,2 ml,6.0,Gastrointestinal
+Salbutamol,Salbutamol Tablets IP 2 mg,10's,4.0,Respiratory
+Salbutamol,Salbutamol Inhaler 100 mcg,200 MDI,95.0,Respiratory
+Salbutamol,Salbutamol Respules 2.5mg/2.5ml,5's,55.0,Respiratory
+Montelukast + Levocetirizine,Montelukast 10mg + Levocetirizine 5mg Tablets,10's,48.0,Respiratory
+Montelukast + Levocetirizine,Montelukast 4mg + Levocetirizine 2.5mg Syrup,60 ml,62.0,Respiratory
+Budesonide,Budesonide Respules 0.5mg/2ml,5's,78.0,Respiratory
+Budesonide,Budesonide Respules 1mg/2ml,5's,110.0,Respiratory
+Budesonide,Budesonide Inhaler 200 mcg,200 MDI,210.0,Respiratory

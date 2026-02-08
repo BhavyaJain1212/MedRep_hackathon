@@ -1,0 +1,129 @@
+{
+  "meta": {
+    "version": "1.0",
+    "description": "Reimbursement coverage data for MedRep AI. Covers PM-JAY, CGHS, ESIC, Jan Aushadhi, and private insurance rules per drug category and per drug.",
+    "sources": ["CGHS Common Formulary 2011", "MSO Formulary 2014", "VMS Formulary 2023", "PM-JAY HBP 2.0", "Jan Aushadhi price lists", "ESIC dispensary drug schedule (drugschedule280912.pdf)"]
+  },
+  "schemes": {
+    "pmjay": {
+      "full_name": "Pradhan Mantri Jan Arogya Yojana (PM-JAY)",
+      "type": "Government-funded secondary/tertiary care insurance",
+      "coverage_model": "Package-based reimbursement (HBP 2.0). Medicines bundled in package rates — no separate drug reimbursement.",
+      "total_packages": "1,949+ packages across 23 specialties",
+      "outpatient_medicines": "NOT covered as standalone OPD reimbursement",
+      "patient_payment": "Zero at point of care for covered hospitalisations",
+      "key_rule": "Drugs used during approved hospitalisations are included in the package rate paid to the hospital"
+    },
+    "cghs": {
+      "full_name": "Central Government Health Scheme (CGHS)",
+      "type": "Employer-based scheme for Central Government employees, pensioners, and dependents",
+      "coverage_model": "Free/subsidised medicines from CGHS wellness centres + cashless/reimbursed inpatient care",
+      "formulary_size": "1,447 generic + 622 branded items (MSO 2014); expanded in VMS 2023",
+      "dispensing_limit": "Maximum 1 month supply per dispensing (3 months for travel abroad)",
+      "chronic_disease_supply": "Available for diabetes, hypertension, cardiac conditions",
+      "key_rule": "Medicines must be in CGHS formulary or life-saving list; non-formulary may be substituted"
+    },
+    "esic": {
+      "full_name": "Employees' State Insurance Scheme (ESIS/ESIC)",
+      "type": "Contributory social health insurance for covered establishment workers",
+      "coverage_model": "Comprehensive medical benefit through ESIS hospitals/dispensaries",
+      "medicines_policy": "Routine OPD and IPD medicines supplied per state formulary at no direct charge",
+      "emergency_reimbursement": "Allowed for emergency treatments at private hospitals (heart attack, haemorrhage, serious accidents)",
+      "key_rule": "All listed drugs routinely available at ESIC facilities; emergency private prescriptions may be reimbursed"
+    },
+    "jan_aushadhi": {
+      "full_name": "Pradhan Mantri Bhartiya Janaushadhi Pariyojana (PMBJP)",
+      "type": "Government-run low-cost generic pharmacy network (NOT insurance)",
+      "coverage_model": "Patients pay out of pocket at heavily discounted generic prices",
+      "key_rule": "No reimbursement — but prices are 50-90% lower than brand-name equivalents"
+    },
+    "private_insurance": {
+      "regulator": "IRDAI",
+      "coverage_model": "Primarily covers hospitalisation (inpatient) expenses. OPD medicines usually excluded unless OPD add-on purchased.",
+      "formulary_concept": "Each insurer maintains own formulary; non-formulary drugs may require full out-of-pocket payment",
+      "pre_existing_disease": "Maximum waiting period capped at 3 years under IRDAI norms",
+      "key_rule": "Medicines during admitted hospital care are covered; chronic OPD prescriptions are generally NOT covered"
+    }
+  },
+  "drug_coverage": {
+    "pain_fever_antiinflammatory": {
+      "drugs": ["Paracetamol", "Ibuprofen", "Diclofenac", "Aceclofenac + Paracetamol", "Aspirin"],
+      "pmjay": "Included in hospitalisation packages (post-MI aspirin, perioperative analgesia). No OPD reimbursement.",
+      "cghs": "Generic versions in CGHS formulary — supplied free at wellness centres for up to 1 month.",
+      "esic": "Paracetamol: YES (injection, effervescent). Ibuprofen: YES (suspension). Diclofenac: YES (injection, suppositories, combos). Aceclofenac: NO. Aspirin: YES (soluble 350mg analgesic tablets; no 75mg cardio-dose in this schedule).",
+      "private": "Covered during hospital admissions. Routine OPD prescriptions for fever/pain usually NOT reimbursed.",
+      "jan_aushadhi": "Paracetamol 500mg ₹2.05/10s, Aspirin 75mg ₹2.50/14s — extremely affordable without insurance.",
+      "agent_questions": [
+        "Are you covered by PM-JAY, CGHS, ESIC, or a private policy?",
+        "Is this for hospitalisation or OPD/self-purchase?",
+        "If private insurance: does your plan have OPD drug cover?"
+      ]
+    },
+    "antibiotics": {
+      "drugs": ["Amoxicillin", "Amoxicillin + Clavulanic Acid", "Azithromycin", "Cefixime", "Ceftriaxone", "Cefuroxime", "Metronidazole", "Doxycycline", "Levofloxacin", "Ciprofloxacin"],
+      "pmjay": "Antibiotic costs bundled within hospitalisation package rates (pneumonia, sepsis, surgery).",
+      "cghs": "Widely used antibiotics (amoxicillin, ceftriaxone, metronidazole) in CGHS formulary and life-saving lists.",
+      "esic": "Amoxicillin: FDC ONLY (amox+clav combos, no plain tablet). Azithromycin: KIT ONLY. Cefixime: YES. Ceftriaxone: FDC ONLY (+sulbactam/+tazobactam). Metronidazole: NO. Levofloxacin: YES (500mg injection only). Doxycycline/Ciprofloxacin: not verified.",
+      "private": "IV antibiotics during admission (ceftriaxone for sepsis) usually covered. OPD antibiotics generally NOT reimbursed.",
+      "jan_aushadhi": "Amoxicillin 500mg ₹32.82/10s, Ceftriaxone 1gm ₹30.00/vial, Metronidazole 400mg ₹7.00/10s.",
+      "agent_questions": [
+        "Was the antibiotic part of a hospital admission or outpatient therapy?",
+        "Which scheme/insurer are you under?",
+        "Do you have access to a Jan Aushadhi Kendra nearby?"
+      ]
+    },
+    "diabetes": {
+      "drugs": ["Metformin", "Glimepiride", "Human Insulin"],
+      "pmjay": "Covered during hospitalisations (MI, DKA, stroke). NOT for routine OPD diabetes prescriptions.",
+      "cghs": "Metformin (G18020), Glimepiride (G18041-42), Insulin (G18018-19, G18038-40) — all in formulary. Monthly supply via wellness centres.",
+      "esic": "Metformin: FDC ONLY (sitagliptin+met, vildagliptin+met; no plain tablet). Glimepiride: NO (ESIC uses glibenclamide/glipizide/gliclazide instead). Human Insulin: YES (40 IU/ml zinc, mixed 50/50, plus detemir and lispro).",
+      "private": "NOT covered for chronic OPD use. Covered during admissions (DKA, MI). Pre-existing diabetes: 3-year waiting period.",
+      "jan_aushadhi": "Metformin 500mg ₹7.50/10s, Glimepiride 2mg ₹14.00/10s, Insulin 30/70 ₹165.00/10ml.",
+      "agent_questions": [
+        "Is this about long-term monthly medicines or a recent hospitalisation?",
+        "Are you a CGHS/ESIC beneficiary (who get chronic drugs dispensed)?",
+        "Are you open to Jan Aushadhi generics to cut OPD costs?"
+      ]
+    },
+    "cardiovascular": {
+      "drugs": ["Amlodipine", "Losartan", "Telmisartan", "Atorvastatin", "Rosuvastatin", "Clopidogrel", "Aspirin + Clopidogrel"],
+      "pmjay": "Essential components of PM-JAY cardiac packages (ACS, PCI, stroke). In-hospital use included in package payments.",
+      "cghs": "Antihypertensives, statins, antiplatelets all in CGHS formulary/life-saving lists. Supplied free from wellness centres.",
+      "esic": "Amlodipine: FDC ONLY (perindopril+amlo, telmisartan+amlo, etc.; no standalone). Losartan: YES (25/50mg, +HCTZ). Telmisartan: FDC ONLY (tel+amlo only). Atorvastatin: YES (10/20mg). Rosuvastatin: YES (10/20mg). Clopidogrel: NO (ESIC lists ticlopidine instead).",
+      "private": "Inpatient cardiac episodes (MI, stenting, CABG) — drug costs covered. Long-term OPD BP/cholesterol NOT covered.",
+      "jan_aushadhi": "Amlodipine 5mg ₹5.00/10s, Atorvastatin 10mg ₹9.50/10s, Clopidogrel 75mg ₹28.00/10s, Losartan 50mg ₹12.00/10s.",
+      "agent_questions": [
+        "Is this about medicines used during a cardiac admission or ongoing home medication?",
+        "Do you have CGHS/ESIC benefits (chronic drug supply)?",
+        "Does your private plan include OPD/medicine coverage?"
+      ]
+    },
+    "gastrointestinal": {
+      "drugs": ["Pantoprazole", "Omeprazole", "Rabeprazole", "Ondansetron"],
+      "pmjay": "PPIs and antiemetics during hospital stays (post-surgery GI protection, chemotherapy nausea) included in package tariff.",
+      "cghs": "PPIs (omeprazole G17003, pantoprazole G17033) and ondansetron (G08049) in CGHS formulary. Dispensed at wellness centres.",
+      "esic": "Pantoprazole: NO. Omeprazole: NO. ESIC uses rabeprazole and esomeprazole in PPI slot. Ondansetron: YES (4mg tablets).",
+      "private": "Covered during hospitalised care. OPD prescriptions for gastritis/GERD rarely reimbursed.",
+      "jan_aushadhi": "Pantoprazole 40mg ₹18.00/10s, Omeprazole 20mg ₹14.00/10s, Rabeprazole 20mg ₹22.00/10s.",
+      "agent_questions": [
+        "Is this PPI for home OPD use or part of an admission?",
+        "Are you covered under any government scheme?",
+        "Would a cheaper generic from Jan Aushadhi be acceptable?"
+      ],
+      "clinical_note": "IMPORTANT: Use pantoprazole (not omeprazole) if patient is on clopidogrel — omeprazole reduces clopidogrel efficacy via CYP2C19 interaction."
+    },
+    "respiratory": {
+      "drugs": ["Salbutamol", "Montelukast + Levocetirizine", "Budesonide"],
+      "pmjay": "Covered during PM-JAY admissions (status asthmaticus, COPD exacerbation). Not separately billed.",
+      "cghs": "Salbutamol (G25010), Budesonide (G25021), Montelukast (G25031) all in CGHS respiratory formulary. Supplied via wellness centres.",
+      "esic": "Salbutamol: YES (syrup, 100mcg inhaler, rotacaps/nebules, combos). Budesonide: YES (100mcg inhaler, +formoterol, +salbutamol respules). Montelukast: FDC ONLY (montelukast+levocetirizine and ebastine+montelukast tablets).",
+      "private": "Hospital respiratory care (nebulised drugs, IV steroids) covered. Chronic OPD inhaler prescriptions seldom reimbursed.",
+      "jan_aushadhi": "Salbutamol Inhaler ₹95.00/200MDI, Budesonide Inhaler ₹210.00/200MDI, Montelukast+Levo ₹48.00/10s.",
+      "agent_questions": [
+        "Is this about emergency hospitalisation costs or month-to-month inhaler expense?",
+        "Do you have ESIC coverage or retail private insurance?",
+        "Is there a Jan Aushadhi Kendra nearby for cheaper inhalers?"
+      ]
+    }
+  }
+}

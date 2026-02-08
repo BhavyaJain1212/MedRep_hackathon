@@ -1,0 +1,1030 @@
+{
+  "meta": {
+    "version": "1.0",
+    "total_drugs": 31,
+    "categories": 6,
+    "description": "Master drug reference for MedRep AI. Maps generic names to OpenFDA query names, brand names, category, primary strength, CGHS formulary codes, and ESIC schedule status.",
+    "esic_statuses": [
+      "yes = standalone listed",
+      "fdc_only = only in fixed-dose combinations",
+      "kit_only = only in pre-packed kits",
+      "no = not in ESIC schedule",
+      "not_verified = not checked against ESIC PDF"
+    ],
+    "esic_source": "ESIC dispensary drug schedule (drugschedule280912.pdf)"
+  },
+  "drugs": [
+    {
+      "id": "paracetamol",
+      "generic_name": "Paracetamol",
+      "openfda_name": "acetaminophen",
+      "category": "Pain Management",
+      "primary_strength": "500mg",
+      "brands": [
+        "Crocin Advance",
+        "Dolo 650",
+        "Calpol"
+      ],
+      "brand_mrp": {
+        "name": "Crocin Advance 500mg",
+        "pack": "10 tablets",
+        "mrp": 17.1,
+        "source": "Apollo Pharmacy"
+      },
+      "jan_aushadhi_mrp": {
+        "variant": "Paracetamol Tablets IP 500 mg",
+        "pack": "10's",
+        "mrp": 2.05
+      },
+      "savings_percent": 88,
+      "cghs_codes": [
+        "G02009"
+      ],
+      "cghs_entry": "G02009 - Paracetamol Tablet 500 mg",
+      "esic_status": "yes",
+      "esic_detail": "Injection 10mg/ml and 1g effervescent tablets listed in ESIC schedule",
+      "has_manual_comparisons": true,
+      "has_manual_interactions": false
+    },
+    {
+      "id": "ibuprofen",
+      "generic_name": "Ibuprofen",
+      "openfda_name": "ibuprofen",
+      "category": "Pain Management",
+      "primary_strength": "400mg",
+      "brands": [
+        "Brufen",
+        "Ibugesic"
+      ],
+      "brand_mrp": {
+        "name": "Brufen 400mg",
+        "pack": "10 tablets",
+        "mrp": 21.5,
+        "source": "PharmEasy"
+      },
+      "jan_aushadhi_mrp": {
+        "variant": "Ibuprofen Tablets IP 400 mg",
+        "pack": "10's",
+        "mrp": 6.25
+      },
+      "savings_percent": 71,
+      "cghs_codes": [
+        "G02005",
+        "G02006",
+        "G02034"
+      ],
+      "cghs_entry": "G02005 - Ibuprofen Tablet 200 mg; G02006 - Ibuprofen Tablet 400mg",
+      "esic_status": "yes",
+      "esic_detail": "Ibuprofen 100mg/5ml oral suspension in ESIC schedule",
+      "has_manual_comparisons": true,
+      "has_manual_interactions": true
+    },
+    {
+      "id": "diclofenac",
+      "generic_name": "Diclofenac",
+      "openfda_name": "diclofenac sodium",
+      "category": "Pain Management",
+      "primary_strength": "50mg",
+      "brands": [
+        "Voveran",
+        "Reactin",
+        "Diclofen"
+      ],
+      "brand_mrp": {
+        "name": "Voveran 50mg",
+        "pack": "10 tablets",
+        "mrp": 27.0,
+        "source": "Medindia/PharmEasy"
+      },
+      "jan_aushadhi_mrp": {
+        "variant": "Diclofenac Tablets IP 50 mg",
+        "pack": "10's",
+        "mrp": 5.0
+      },
+      "savings_percent": 81,
+      "cghs_codes": [
+        "G02002",
+        "G02004"
+      ],
+      "cghs_entry": "G02002 - Diclofenac Sodium Tablet 50 mg; G02004 - Diclofenac Sodium Injection 25 mg/ml",
+      "esic_status": "yes",
+      "esic_detail": "Injection, 25/100mg suppositories, and combinations in ESIC schedule",
+      "has_manual_comparisons": true,
+      "has_manual_interactions": true
+    },
+    {
+      "id": "aceclofenac",
+      "generic_name": "Aceclofenac + Paracetamol",
+      "openfda_name": "aceclofenac",
+      "category": "Pain Management",
+      "primary_strength": "100mg+325mg",
+      "brands": [
+        "Zerodol-P",
+        "Hifenac-P"
+      ],
+      "brand_mrp": {
+        "name": "Zerodol-P",
+        "pack": "10 tablets",
+        "mrp": 78.0,
+        "source": "IndiaMART"
+      },
+      "jan_aushadhi_mrp": {
+        "variant": "Aceclofenac 100mg and Paracetamol 325mg Tablets",
+        "pack": "10's",
+        "mrp": 15.63
+      },
+      "savings_percent": 80,
+      "cghs_codes": [],
+      "cghs_entry": "Covered under individual components (Aceclofenac, Paracetamol)",
+      "esic_status": "no",
+      "esic_detail": "Aceclofenac+Paracetamol FDC not listed in ESIC schedule",
+      "has_manual_comparisons": true,
+      "has_manual_interactions": true
+    },
+    {
+      "id": "aspirin",
+      "generic_name": "Aspirin",
+      "openfda_name": "aspirin",
+      "category": "Cardiovascular",
+      "primary_strength": "75mg",
+      "brands": [
+        "Ecosprin",
+        "Disprin"
+      ],
+      "brand_mrp": {
+        "name": "Ecosprin 75mg",
+        "pack": "14 tablets",
+        "mrp": 5.29,
+        "source": "PharmEasy/Medkart"
+      },
+      "jan_aushadhi_mrp": {
+        "variant": "Aspirin Gastro-resistant Tablets IP 75 mg",
+        "pack": "14's",
+        "mrp": 2.5
+      },
+      "savings_percent": 53,
+      "cghs_codes": [],
+      "cghs_entry": "Covered under cardiovascular drug bucket in CGHS formulary",
+      "esic_status": "yes",
+      "esic_detail": "Soluble aspirin 350mg tablets listed under non-opioid analgesics; no 75mg cardio-dose in this schedule",
+      "has_manual_comparisons": true,
+      "has_manual_interactions": false
+    },
+    {
+      "id": "amoxicillin",
+      "generic_name": "Amoxicillin",
+      "openfda_name": "amoxicillin",
+      "category": "Antibiotics",
+      "primary_strength": "500mg",
+      "brands": [
+        "Amoxil",
+        "Almox",
+        "Mox",
+        "Novamox"
+      ],
+      "brand_mrp": {
+        "name": "Amoxil 500mg",
+        "pack": "10 capsules",
+        "mrp": 84.9,
+        "source": "PharmEasy/Apollo"
+      },
+      "jan_aushadhi_mrp": {
+        "variant": "Amoxycillin Capsules IP 500mg",
+        "pack": "10's",
+        "mrp": 32.82
+      },
+      "savings_percent": 61,
+      "cghs_codes": [
+        "G06010",
+        "G06011",
+        "G06012",
+        "G06193"
+      ],
+      "cghs_entry": "G06011 - Amoxycillin Trihydrate Cap 250mg; G06012 - Amoxycillin Trihydrate Cap 500mg",
+      "esic_status": "fdc_only",
+      "esic_detail": "No plain amoxicillin tablet; only amoxicillin+clavulanate and amox+clav+lactobacillus FDCs",
+      "has_manual_comparisons": true,
+      "has_manual_interactions": false
+    },
+    {
+      "id": "amoxicillin_clavulanate",
+      "generic_name": "Amoxicillin + Clavulanic Acid",
+      "openfda_name": "amoxicillin and clavulanate potassium",
+      "category": "Antibiotics",
+      "primary_strength": "500mg+125mg",
+      "brands": [
+        "Augmentin 625 Duo",
+        "Moxikind-CV"
+      ],
+      "brand_mrp": {
+        "name": "Augmentin 625 Duo",
+        "pack": "6 tablets",
+        "mrp": 195.77,
+        "source": "PharmEasy/1mg"
+      },
+      "jan_aushadhi_mrp": {
+        "variant": "Amoxycillin 500mg and Potassium Clavulanate 125mg Tablets",
+        "pack": "6's",
+        "mrp": 52.6
+      },
+      "savings_percent": 73,
+      "cghs_codes": [
+        "G06193"
+      ],
+      "cghs_entry": "G06193 - Amoxycillin + Clavulanic Acid Tablet 250mg+125mg",
+      "esic_status": "yes",
+      "esic_detail": "Amoxicillin+clavulanate FDCs listed in ESIC schedule",
+      "has_manual_comparisons": true,
+      "has_manual_interactions": false
+    },
+    {
+      "id": "azithromycin",
+      "generic_name": "Azithromycin",
+      "openfda_name": "azithromycin",
+      "category": "Antibiotics",
+      "primary_strength": "500mg",
+      "brands": [
+        "Azee",
+        "Azithral",
+        "Zithromax"
+      ],
+      "brand_mrp": {
+        "name": "Azee 500mg",
+        "pack": "3 tablets",
+        "mrp": 71.0,
+        "source": "PharmEasy/Medindia"
+      },
+      "jan_aushadhi_mrp": {
+        "variant": "Azithromycin Tablets IP 500 mg",
+        "pack": "3's",
+        "mrp": 32.0
+      },
+      "savings_percent": 55,
+      "cghs_codes": [
+        "G06037",
+        "G06038",
+        "G06039",
+        "G06040"
+      ],
+      "cghs_entry": "G06039 - Azithromycin Capsule 500mg",
+      "esic_status": "kit_only",
+      "esic_detail": "Only in Fluconazole+Azithromycin+Secnidazole kit; no standalone azithromycin tablet",
+      "has_manual_comparisons": true,
+      "has_manual_interactions": true
+    },
+    {
+      "id": "cefixime",
+      "generic_name": "Cefixime",
+      "openfda_name": "cefixime",
+      "category": "Antibiotics",
+      "primary_strength": "200mg",
+      "brands": [
+        "Taxim-O",
+        "Cefix"
+      ],
+      "brand_mrp": {
+        "name": "Taxim-O 200mg",
+        "pack": "10 tablets",
+        "mrp": 104.43,
+        "source": "PharmEasy/Medindia"
+      },
+      "jan_aushadhi_mrp": {
+        "variant": "Cefixime Tablets IP 200 mg",
+        "pack": "10's",
+        "mrp": 75.0
+      },
+      "savings_percent": 28,
+      "cghs_codes": [
+        "G06170",
+        "G06206",
+        "G06207"
+      ],
+      "cghs_entry": "G06170 - Cefixime Tablet 200mg",
+      "esic_status": "yes",
+      "esic_detail": "Cefixime 200mg tablet (with lactobacillus) and 50mg/5ml syrup in ESIC schedule",
+      "has_manual_comparisons": true,
+      "has_manual_interactions": false
+    },
+    {
+      "id": "ceftriaxone",
+      "generic_name": "Ceftriaxone",
+      "openfda_name": "ceftriaxone",
+      "category": "Antibiotics",
+      "primary_strength": "1gm injection",
+      "brands": [
+        "Monocef",
+        "Cefaxone"
+      ],
+      "brand_mrp": {
+        "name": "Monocef 1gm",
+        "pack": "1 vial",
+        "mrp": 64.69,
+        "source": "1mg/PharmEasy"
+      },
+      "jan_aushadhi_mrp": {
+        "variant": "Ceftriaxone Injection IP 1 gm",
+        "pack": "Vial",
+        "mrp": 30.0
+      },
+      "savings_percent": 54,
+      "cghs_codes": [
+        "G06027",
+        "G06028"
+      ],
+      "cghs_entry": "G06027 - Ceftriaxone Sodium Injection 250mg; G06028 - Ceftriaxone Sodium Injection 1 g",
+      "esic_status": "fdc_only",
+      "esic_detail": "Ceftriaxone+sulbactam and ceftriaxone+tazobactam FDC vials (250/500/1000mg); no plain ceftriaxone",
+      "has_manual_comparisons": false,
+      "has_manual_interactions": false
+    },
+    {
+      "id": "cefuroxime",
+      "generic_name": "Cefuroxime",
+      "openfda_name": "cefuroxime axetil",
+      "category": "Antibiotics",
+      "primary_strength": "500mg",
+      "brands": [
+        "Ceftum",
+        "Zocef",
+        "Forcef"
+      ],
+      "brand_mrp": {
+        "name": "Ceftum 500mg",
+        "pack": "10 tablets",
+        "mrp": 549.41,
+        "source": "PharmEasy/1mg"
+      },
+      "jan_aushadhi_mrp": {
+        "variant": "Cefuroxime Axetil Tablets IP 500 mg",
+        "pack": "10's",
+        "mrp": 220.0
+      },
+      "savings_percent": 60,
+      "cghs_codes": [],
+      "cghs_entry": "Not individually listed in CGHS 2011 formulary; covered under antibiotic drug bucket",
+      "esic_status": "yes",
+      "esic_detail": "Cefuroxime injections (750mg, 1.5g) listed plain; oral tablets only as cefuroxime+clavulanate FDC",
+      "has_manual_comparisons": false,
+      "has_manual_interactions": false
+    },
+    {
+      "id": "metronidazole",
+      "generic_name": "Metronidazole",
+      "openfda_name": "metronidazole",
+      "category": "Antibiotics",
+      "primary_strength": "400mg",
+      "brands": [
+        "Metrogyl",
+        "Flagyl",
+        "Metron"
+      ],
+      "brand_mrp": {
+        "name": "Metrogyl 400mg",
+        "pack": "10 tablets",
+        "mrp": 17.0,
+        "source": "PharmEasy/Apollo"
+      },
+      "jan_aushadhi_mrp": {
+        "variant": "Metronidazole Tablets IP 400 mg",
+        "pack": "10's",
+        "mrp": 7.0
+      },
+      "savings_percent": 59,
+      "cghs_codes": [
+        "G06139",
+        "G06140",
+        "G06062"
+      ],
+      "cghs_entry": "G06139 - Metronidazole Tablet 200 mg; G06140 - Metronidazole Tablet 400mg",
+      "esic_status": "no",
+      "esic_detail": "Not listed in ESIC drug schedule",
+      "has_manual_comparisons": false,
+      "has_manual_interactions": false
+    },
+    {
+      "id": "doxycycline",
+      "generic_name": "Doxycycline",
+      "openfda_name": "doxycycline",
+      "category": "Antibiotics",
+      "primary_strength": "100mg",
+      "brands": [
+        "Doxy-1",
+        "Doxicip",
+        "Minicycline"
+      ],
+      "brand_mrp": {
+        "name": "Doxy 100mg",
+        "pack": "10 capsules",
+        "mrp": 35.0,
+        "source": "PharmEasy/IndiaMART"
+      },
+      "jan_aushadhi_mrp": {
+        "variant": "Doxycycline Capsules IP 100 mg",
+        "pack": "10's",
+        "mrp": 22.0
+      },
+      "savings_percent": 37,
+      "cghs_codes": [],
+      "cghs_entry": "Not individually listed in CGHS 2011 formulary; covered under antibiotic drug bucket",
+      "esic_status": "not_verified",
+      "esic_detail": "Doxycycline not individually verified against ESIC schedule",
+      "has_manual_comparisons": false,
+      "has_manual_interactions": false
+    },
+    {
+      "id": "levofloxacin",
+      "generic_name": "Levofloxacin",
+      "openfda_name": "levofloxacin",
+      "category": "Antibiotics",
+      "primary_strength": "500mg",
+      "brands": [
+        "Levoflox",
+        "Lquin",
+        "Levoquin"
+      ],
+      "brand_mrp": {
+        "name": "Levoflox 500mg",
+        "pack": "10 tablets",
+        "mrp": 94.39,
+        "source": "PharmEasy/Zeelab"
+      },
+      "jan_aushadhi_mrp": {
+        "variant": "Levofloxacin Tablets IP 500 mg",
+        "pack": "10's",
+        "mrp": 85.0
+      },
+      "savings_percent": 10,
+      "cghs_codes": [],
+      "cghs_entry": "Not individually listed in CGHS 2011 formulary; covered under antibiotic drug bucket",
+      "esic_status": "yes",
+      "esic_detail": "Levofloxacin 500mg injection listed; no oral form in this ESIC schedule",
+      "has_manual_comparisons": false,
+      "has_manual_interactions": false
+    },
+    {
+      "id": "ciprofloxacin",
+      "generic_name": "Ciprofloxacin",
+      "openfda_name": "ciprofloxacin",
+      "category": "Antibiotics",
+      "primary_strength": "500mg",
+      "brands": [
+        "Ciplox",
+        "Cifran"
+      ],
+      "brand_mrp": null,
+      "jan_aushadhi_mrp": {
+        "variant": "Ciprofloxacin Tablets IP 500 mg",
+        "pack": "10's",
+        "mrp": 48.0
+      },
+      "savings_percent": null,
+      "cghs_codes": [],
+      "cghs_entry": "Not individually listed in CGHS 2011 formulary; covered under antibiotic drug bucket",
+      "esic_status": "not_verified",
+      "esic_detail": "Ciprofloxacin not individually verified against ESIC schedule",
+      "has_manual_comparisons": false,
+      "has_manual_interactions": false
+    },
+    {
+      "id": "metformin",
+      "generic_name": "Metformin",
+      "openfda_name": "metformin hydrochloride",
+      "category": "Diabetes",
+      "primary_strength": "500mg",
+      "brands": [
+        "Glycomet",
+        "Glucophage"
+      ],
+      "brand_mrp": {
+        "name": "Glycomet 500mg",
+        "pack": "10 tablets",
+        "mrp": 17.5,
+        "source": "1mg/PharmEasy"
+      },
+      "jan_aushadhi_mrp": {
+        "variant": "Metformin Tablets IP 500 mg",
+        "pack": "10's",
+        "mrp": 7.5
+      },
+      "savings_percent": 57,
+      "cghs_codes": [
+        "G18020",
+        "G18086",
+        "G18091",
+        "G18092"
+      ],
+      "cghs_entry": "G18020 - Metformin Tablet IP 500 mg; G18086 - Metformin SR Tablet 500 mg",
+      "esic_status": "fdc_only",
+      "esic_detail": "Only in sitagliptin+metformin and vildagliptin+metformin combos; no plain metformin tablet",
+      "has_manual_comparisons": true,
+      "has_manual_interactions": true
+    },
+    {
+      "id": "glimepiride",
+      "generic_name": "Glimepiride",
+      "openfda_name": "glimepiride",
+      "category": "Diabetes",
+      "primary_strength": "2mg",
+      "brands": [
+        "Glimestar",
+        "Amaryl"
+      ],
+      "brand_mrp": {
+        "name": "Glimestar 2mg",
+        "pack": "10 tablets",
+        "mrp": 39.75,
+        "source": "PharmEasy"
+      },
+      "jan_aushadhi_mrp": {
+        "variant": "Glimepiride Tablets IP 2 mg",
+        "pack": "10's",
+        "mrp": 14.0
+      },
+      "savings_percent": 65,
+      "cghs_codes": [
+        "G18041",
+        "G18042",
+        "G18063"
+      ],
+      "cghs_entry": "G18041 - Glimepiride Tablet IP 1 mg; G18042 - Glimepiride Tablet IP 2 mg",
+      "esic_status": "no",
+      "esic_detail": "Not listed; ESIC schedule has glibenclamide, glipizide, gliclazide MR instead",
+      "has_manual_comparisons": true,
+      "has_manual_interactions": false
+    },
+    {
+      "id": "insulin_human",
+      "generic_name": "Human Insulin",
+      "openfda_name": "insulin human",
+      "category": "Diabetes",
+      "primary_strength": "40 IU/ml",
+      "brands": [
+        "Human Mixtard 30/70",
+        "Huminsulin"
+      ],
+      "brand_mrp": {
+        "name": "Human Mixtard 30/70",
+        "pack": "10ml vial",
+        "mrp": 181.39,
+        "source": "PharmEasy"
+      },
+      "jan_aushadhi_mrp": {
+        "variant": "Human Mixtard Insulin 30/70 Injection",
+        "pack": "10 ml",
+        "mrp": 165.0
+      },
+      "savings_percent": 9,
+      "cghs_codes": [
+        "G18018",
+        "G18019",
+        "G18038",
+        "G18039",
+        "G18040"
+      ],
+      "cghs_entry": "G18039 - Human Insulin 30/70 Injection 40 IU/ml",
+      "esic_status": "yes",
+      "esic_detail": "Human insulin zinc suspension 40 IU/ml, mixed 50/50; plus detemir and lispro analogues",
+      "has_manual_comparisons": false,
+      "has_manual_interactions": false
+    },
+    {
+      "id": "amlodipine",
+      "generic_name": "Amlodipine",
+      "openfda_name": "amlodipine besylate",
+      "category": "Cardiovascular",
+      "primary_strength": "5mg",
+      "brands": [
+        "Amlokind",
+        "Amlong",
+        "Stamlo"
+      ],
+      "brand_mrp": {
+        "name": "Amlokind 5mg",
+        "pack": "10 tablets",
+        "mrp": 13.0,
+        "source": "Apollo Pharmacy"
+      },
+      "jan_aushadhi_mrp": {
+        "variant": "Amlodipine Tablets IP 5 mg",
+        "pack": "10's",
+        "mrp": 5.0
+      },
+      "savings_percent": 62,
+      "cghs_codes": [
+        "G12034",
+        "G12035",
+        "G12071"
+      ],
+      "cghs_entry": "G12035 - Amlodipine Tablet 5mg",
+      "esic_status": "fdc_only",
+      "esic_detail": "Only in perindopril+amlodipine, telmisartan+amlodipine, indapamide+amlodipine FDCs; no standalone tablet",
+      "has_manual_comparisons": true,
+      "has_manual_interactions": true
+    },
+    {
+      "id": "losartan",
+      "generic_name": "Losartan",
+      "openfda_name": "losartan potassium",
+      "category": "Cardiovascular",
+      "primary_strength": "50mg",
+      "brands": [
+        "Losar",
+        "Losacar",
+        "Covance"
+      ],
+      "brand_mrp": {
+        "name": "Losar 50mg",
+        "pack": "10 tablets",
+        "mrp": 126.8,
+        "source": "PharmEasy (10-strip MRP, not pro-rated from 20-tab offer)"
+      },
+      "jan_aushadhi_mrp": {
+        "variant": "Losartan Tablets IP 50 mg",
+        "pack": "10's",
+        "mrp": 12.0
+      },
+      "savings_percent": 91,
+      "cghs_codes": [
+        "G12047",
+        "G12048",
+        "G12074"
+      ],
+      "cghs_entry": "G12048 - Losartan Potassium Tablet 50mg",
+      "esic_status": "yes",
+      "esic_detail": "Losartan 25mg and 50mg tablets, plus losartan+HCTZ 50/12.5mg",
+      "has_manual_comparisons": true,
+      "has_manual_interactions": true
+    },
+    {
+      "id": "telmisartan",
+      "generic_name": "Telmisartan",
+      "openfda_name": "telmisartan",
+      "category": "Cardiovascular",
+      "primary_strength": "40mg",
+      "brands": [
+        "Telsartan",
+        "Telma",
+        "Telvas"
+      ],
+      "brand_mrp": {
+        "name": "Telsartan 40mg",
+        "pack": "10 tablets",
+        "mrp": 68.0,
+        "source": "PharmEasy/GenericArt"
+      },
+      "jan_aushadhi_mrp": {
+        "variant": "Telmisartan Tablets IP 40 mg",
+        "pack": "10's",
+        "mrp": 14.0
+      },
+      "savings_percent": 79,
+      "cghs_codes": [
+        "G12128",
+        "G12129"
+      ],
+      "cghs_entry": "G12128 - Telmisartan Tablet 20mg; G12129 - Telmisartan Tablet 40mg",
+      "esic_status": "fdc_only",
+      "esic_detail": "Only telmisartan 40mg + amlodipine 5mg FDC; no standalone telmisartan tablet",
+      "has_manual_comparisons": true,
+      "has_manual_interactions": true
+    },
+    {
+      "id": "atorvastatin",
+      "generic_name": "Atorvastatin",
+      "openfda_name": "atorvastatin calcium",
+      "category": "Cardiovascular",
+      "primary_strength": "10mg",
+      "brands": [
+        "Atorva",
+        "Lipitor",
+        "Tonact"
+      ],
+      "brand_mrp": {
+        "name": "Atorva 10mg",
+        "pack": "10 tablets",
+        "mrp": 73.58,
+        "source": "MedPlus"
+      },
+      "jan_aushadhi_mrp": {
+        "variant": "Atorvastatin Tablets IP 10 mg",
+        "pack": "10's",
+        "mrp": 9.5
+      },
+      "savings_percent": 87,
+      "cghs_codes": [
+        "G12086",
+        "G12087"
+      ],
+      "cghs_entry": "G12087 - Atorvastatin Tablet 10 mg",
+      "esic_status": "yes",
+      "esic_detail": "Atorvastatin 10mg and 20mg tablets in ESIC schedule",
+      "has_manual_comparisons": true,
+      "has_manual_interactions": true
+    },
+    {
+      "id": "rosuvastatin",
+      "generic_name": "Rosuvastatin",
+      "openfda_name": "rosuvastatin calcium",
+      "category": "Cardiovascular",
+      "primary_strength": "10mg",
+      "brands": [
+        "Roseday",
+        "Crestor",
+        "Rosuvas"
+      ],
+      "brand_mrp": {
+        "name": "Roseday 10mg",
+        "pack": "10 tablets",
+        "mrp": 96.8,
+        "source": "Apollo Pharmacy"
+      },
+      "jan_aushadhi_mrp": {
+        "variant": "Rosuvastatin Tablets IP 10 mg",
+        "pack": "10's",
+        "mrp": 22.0
+      },
+      "savings_percent": 77,
+      "cghs_codes": [
+        "G12123",
+        "G12124",
+        "G12125"
+      ],
+      "cghs_entry": "G12123 - Rosuvastatin Tablet 5mg; G12124 - Rosuvastatin Tablet 10mg",
+      "esic_status": "yes",
+      "esic_detail": "Rosuvastatin 10mg and 20mg tablets in ESIC schedule",
+      "has_manual_comparisons": true,
+      "has_manual_interactions": true
+    },
+    {
+      "id": "clopidogrel",
+      "generic_name": "Clopidogrel",
+      "openfda_name": "clopidogrel bisulfate",
+      "category": "Cardiovascular",
+      "primary_strength": "75mg",
+      "brands": [
+        "Clopivas",
+        "Clopilet",
+        "Plavix"
+      ],
+      "brand_mrp": {
+        "name": "Clopivas 75mg",
+        "pack": "10 tablets",
+        "mrp": 53.72,
+        "source": "PharmEasy/1mg"
+      },
+      "jan_aushadhi_mrp": {
+        "variant": "Clopidogrel Tablets IP 75 mg",
+        "pack": "10's",
+        "mrp": 28.0
+      },
+      "savings_percent": 48,
+      "cghs_codes": [
+        "G12078"
+      ],
+      "cghs_entry": "G12078 - Clopidogrel Tablet 75mg",
+      "esic_status": "no",
+      "esic_detail": "Not listed; ESIC schedule has ticlopidine and anticoagulants instead",
+      "has_manual_comparisons": true,
+      "has_manual_interactions": true
+    },
+    {
+      "id": "pantoprazole",
+      "generic_name": "Pantoprazole",
+      "openfda_name": "pantoprazole sodium",
+      "category": "Gastrointestinal",
+      "primary_strength": "40mg",
+      "brands": [
+        "Pan 40",
+        "Pantop",
+        "Pantocid"
+      ],
+      "brand_mrp": {
+        "name": "Pan 40mg",
+        "pack": "10 tablets",
+        "mrp": 73.45,
+        "source": "Medindia/PharmEasy"
+      },
+      "jan_aushadhi_mrp": {
+        "variant": "Pantoprazole Tablets IP 40 mg",
+        "pack": "10's",
+        "mrp": 18.0
+      },
+      "savings_percent": 75,
+      "cghs_codes": [
+        "G17033",
+        "G17034",
+        "G17046"
+      ],
+      "cghs_entry": "G17033 - Pantoprazole Tablet 40mg",
+      "esic_status": "no",
+      "esic_detail": "Not listed; ESIC schedule uses rabeprazole and esomeprazole in PPI slot",
+      "has_manual_comparisons": true,
+      "has_manual_interactions": false
+    },
+    {
+      "id": "omeprazole",
+      "generic_name": "Omeprazole",
+      "openfda_name": "omeprazole",
+      "category": "Gastrointestinal",
+      "primary_strength": "20mg",
+      "brands": [
+        "Omez",
+        "Ocid",
+        "Omee"
+      ],
+      "brand_mrp": {
+        "name": "Omez 20mg",
+        "pack": "10 capsules",
+        "mrp": 28.0,
+        "source": "PharmEasy"
+      },
+      "jan_aushadhi_mrp": {
+        "variant": "Omeprazole Capsules IP 20 mg",
+        "pack": "10's",
+        "mrp": 14.0
+      },
+      "savings_percent": 50,
+      "cghs_codes": [
+        "G17002",
+        "G17003",
+        "G17004"
+      ],
+      "cghs_entry": "G17003 - Omeprazole Capsule 20mg",
+      "esic_status": "no",
+      "esic_detail": "Not listed in ESIC GI drug block (rabeprazole/esomeprazole used instead)",
+      "has_manual_comparisons": true,
+      "has_manual_interactions": true
+    },
+    {
+      "id": "rabeprazole",
+      "generic_name": "Rabeprazole",
+      "openfda_name": "rabeprazole sodium",
+      "category": "Gastrointestinal",
+      "primary_strength": "20mg",
+      "brands": [
+        "Razo",
+        "Rabicip",
+        "Rabesec"
+      ],
+      "brand_mrp": {
+        "name": "Razo 20mg",
+        "pack": "10 tablets",
+        "mrp": 133.4,
+        "source": "PharmEasy"
+      },
+      "jan_aushadhi_mrp": {
+        "variant": "Rabeprazole Tablets IP 20 mg",
+        "pack": "10's",
+        "mrp": 22.0
+      },
+      "savings_percent": 84,
+      "cghs_codes": [],
+      "cghs_entry": "Not individually listed in CGHS 2011 formulary; covered under GI drug bucket",
+      "esic_status": "yes",
+      "esic_detail": "Rabeprazole tablets and rabeprazole+mosapride FDC listed in ESIC PPI section",
+      "has_manual_comparisons": true,
+      "has_manual_interactions": false
+    },
+    {
+      "id": "ondansetron",
+      "generic_name": "Ondansetron",
+      "openfda_name": "ondansetron",
+      "category": "Gastrointestinal",
+      "primary_strength": "4mg",
+      "brands": [
+        "Emeset",
+        "Odanse",
+        "Ondem"
+      ],
+      "brand_mrp": {
+        "name": "Emeset 4mg",
+        "pack": "10 tablets",
+        "mrp": 43.0,
+        "source": "Medindia/PharmEasy"
+      },
+      "jan_aushadhi_mrp": {
+        "variant": "Ondansetron Tablets IP 4 mg",
+        "pack": "10's",
+        "mrp": 10.0
+      },
+      "savings_percent": 77,
+      "cghs_codes": [
+        "G08049",
+        "G08050",
+        "G08051",
+        "G08052"
+      ],
+      "cghs_entry": "G08049 - Ondansetron Tablet 4 mg",
+      "esic_status": "yes",
+      "esic_detail": "Ondansetron 4mg tablets in ESIC schedule",
+      "has_manual_comparisons": false,
+      "has_manual_interactions": false
+    },
+    {
+      "id": "salbutamol",
+      "generic_name": "Salbutamol",
+      "openfda_name": "albuterol sulfate",
+      "category": "Respiratory",
+      "primary_strength": "100mcg inhaler",
+      "brands": [
+        "Asthalin"
+      ],
+      "brand_mrp": {
+        "name": "Asthalin 100mcg Inhaler",
+        "pack": "200 MDI",
+        "mrp": 168.79,
+        "source": "PharmEasy"
+      },
+      "jan_aushadhi_mrp": {
+        "variant": "Salbutamol Inhaler 100 mcg",
+        "pack": "200 MDI",
+        "mrp": 95.0
+      },
+      "savings_percent": 44,
+      "cghs_codes": [
+        "G25007",
+        "G25008",
+        "G25009",
+        "G25010",
+        "G25022",
+        "G25023"
+      ],
+      "cghs_entry": "G25010 - Salbutamol Inhaler IP 100 mcg/dose",
+      "esic_status": "yes",
+      "esic_detail": "Salbutamol syrup, 100mcg inhaler, rotacaps/nebules, and combinations in ESIC schedule",
+      "has_manual_comparisons": true,
+      "has_manual_interactions": true
+    },
+    {
+      "id": "montelukast_levocetirizine",
+      "generic_name": "Montelukast + Levocetirizine",
+      "openfda_name": "montelukast sodium",
+      "category": "Respiratory",
+      "primary_strength": "10mg+5mg",
+      "brands": [
+        "Montek-LC",
+        "Montas-L",
+        "Levocet-M"
+      ],
+      "brand_mrp": {
+        "name": "Montas-L",
+        "pack": "10 tablets",
+        "mrp": 150.0,
+        "source": "PharmEasy"
+      },
+      "jan_aushadhi_mrp": {
+        "variant": "Montelukast 10mg + Levocetirizine 5mg Tablets",
+        "pack": "10's",
+        "mrp": 48.0
+      },
+      "savings_percent": 68,
+      "cghs_codes": [
+        "G25031",
+        "G25057",
+        "G25111"
+      ],
+      "cghs_entry": "G25031 - Montelukast Tablet IP 10 mg; G25111 - Levocetirizine + Montelukast Tab",
+      "esic_status": "fdc_only",
+      "esic_detail": "Montelukast 10mg+levocetirizine 5mg and ebastine 10mg+montelukast 10mg FDC tablets; no standalone montelukast",
+      "has_manual_comparisons": true,
+      "has_manual_interactions": false
+    },
+    {
+      "id": "budesonide",
+      "generic_name": "Budesonide",
+      "openfda_name": "budesonide",
+      "category": "Respiratory",
+      "primary_strength": "200mcg inhaler",
+      "brands": [
+        "Budecort",
+        "Budez",
+        "Pulmicort"
+      ],
+      "brand_mrp": {
+        "name": "Budecort 200mcg",
+        "pack": "200 MDI",
+        "mrp": 490.56,
+        "source": "PharmEasy/Medindia"
+      },
+      "jan_aushadhi_mrp": {
+        "variant": "Budesonide Inhaler 200 mcg",
+        "pack": "200 MDI",
+        "mrp": 210.0
+      },
+      "savings_percent": 57,
+      "cghs_codes": [
+        "G25021",
+        "G25043",
+        "G25044",
+        "G25050",
+        "G25051",
+        "G25052"
+      ],
+      "cghs_entry": "G25021 - Budesonide Inhaler 200 mcg (200 MD)",
+      "esic_status": "yes",
+      "esic_detail": "Budesonide 100mcg inhaler, budesonide+formoterol inhaler, budesonide+salbutamol respules, budesonide respules",
+      "has_manual_comparisons": true,
+      "has_manual_interactions": false
+    }
+  ]
+}
