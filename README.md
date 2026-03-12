@@ -31,6 +31,6 @@ MedRep AI is a "Zero-Friction" clinical assistant. Instead of hunting through st
 * **Embeddings:** OpenAI `text-embedding-3-small`
 * **Framework:** LangChain (LCEL)
 * **Vector Store:** ChromaDB (Local SQLite)
-* **Frontend:** Streamlit
+* **Frontend:** ReactJS
 * **Audio Processing:** `SpeechRecognition`, `PyAudio`
 
