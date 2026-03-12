@@ -34,9 +34,3 @@ MedRep AI is a "Zero-Friction" clinical assistant. Instead of hunting through st
 * **Frontend:** Streamlit
 * **Audio Processing:** `SpeechRecognition`, `PyAudio`
 
-## 🚀 Installation & Setup
-
-### 1. Clone the repository
-```bash
-git clone [https://github.com/yourusername/medrep-ai.git](https://github.com/yourusername/medrep-ai.git)
-cd medrep-ai
